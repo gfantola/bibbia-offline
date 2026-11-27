@@ -88,7 +88,7 @@ function render(scroll=false){sync();const b=book(),ci=info();$('chapterTitle').
  const at=data.books.indexOf(b),cs=chapters();$('previous').disabled=$('bottomPrevious').disabled=at===0&&state.chapter===cs[0];$('next').disabled=$('bottomNext').disabled=at===data.books.length-1&&state.chapter===cs.at(-1);$('bookmarkCount').textContent=marks.length;
  $('saveBookmark').textContent=marks.some(m=>same(m,state))?'★ Passo salvato':'☆ Salva passo';persist();if(scroll)requestAnimationFrame(()=>$('v'+state.start)?.scrollIntoView({block:'start',behavior:'instant'}))}
 function same(a,b){return a.book===b.book&&a.chapter===b.chapter&&a.start===b.start&&a.end===b.end&&JSON.stringify(a.ids||null)===JSON.stringify(b.ids||null)}
-function passage(p){const out={book:p.book,chapter:p.chapter,start:p.start,end:p.end};if(p.ids)out.ids=[...new Set(p.ids)].sort((a,b)=>a-b);return out}
+function passage(p){const out={book:p.book,chapter:p.chapter,start:p.start,end:p.end};if(p.ids){const ids=[...new Set(p.ids)].sort((a,b)=>a-b);if(ids.length!==p.end-p.start+1)out.ids=ids}return out}
 function navigate(p,scroll=true){if(!isPassage(p)){message('Questo riferimento non è presente nel dataset.');return false}state=passage(p);render(scroll);message(reference()+' · Passo selezionato');return true}
 function step(delta){let b=book(),cs=chapters(),i=cs.indexOf(state.chapter)+delta;if(i<0||i>=cs.length){const next=data.books[data.books.indexOf(b)+delta];if(!next)return;b=next;cs=chapters(b);i=delta>0?0:cs.length-1}const c=cs[i],v=b.chapters[c][0].verse;navigate({book:b.id,chapter:c,start:v,end:v})}
 function setData(d,restore=true){validate(d);data=d;datasetKey=fingerprint(d);aliases=new Map();index=[];$('book').replaceChildren();
