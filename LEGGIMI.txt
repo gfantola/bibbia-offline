@@ -1,57 +1,42 @@
-BIBBIA OFFLINE — 27 NOVEMBRE 2026
+BIBBIA OFFLINE · CEI 2008
 
-FILE PRINCIPALE
-Apri Bibbia-offline.html in un browser con JavaScript attivo. Il testo è già incluso: il JSON separato non è necessario per la lettura. Non occorrono account, connessioni, font o librerie esterne.
+Apri index.html in un browser per leggere il testo incluso.
+Il sito GitHub Pages offre la stessa interfaccia; per una copia autonoma
+usa Testo, importazione e guida → Scarica HTML con il testo attuale.
+La sola visita al sito non garantisce la lettura offline successiva.
 
-TESTO INCLUSO E PROVENIENZA
-Diodati Bibbia 1885, dataset ita1885 pubblicato da eBible.org, che lo dichiara Public Domain. Pagina: https://ebible.org/details.php?id=ita1885
-Archivio acquisito: https://ebible.org/Scriptures/ita1885_vpl.zip
-Metadati del fornitore: 2025-05-03; contributore United Bible Societies. Acquisizione: 27 novembre 2026.
-66 libri, 1189 capitoli, 31095 righe di versetti nel dataset fornito. Sono mantenuti numeri e testo delle righe originali; i codici dei libri sono convertiti in identificativi standard, i nomi dell’interfaccia sono in italiano. I numeri non vengono ricreati né rinumerati per riempire eventuali lacune della fonte.
-L’archivio VPL contiene solo testo: mancano note, impaginazione, titoli di sezione e introduzioni. Non è stata effettuata una collazione critica del testo digitale con un’edizione a stampa.
-La Diodati è una traduzione storica, linguisticamente diversa dalla CEI 2008. Questo dataset non contiene i sette libri deuterocanonici del canone cattolico e non sostituisce un Lezionario liturgico. Non confonderla con la moderna Nuova Diodati.
+Sono inclusi 73 libri, con entrambi i testi di Ester.
+Usa il menu Versione di Ester per scegliere il testo greco o quello ebraico.
+Riferimenti: Gv 3,16; Mt 5,1-12; 1 Cor 13; Est 1,1a; Est ebraico 9,30.
+Per i Salmi usa il primo numero del titolo, come nel file EPUB.
 
-VERIFICA CEI 2008
-La CEI 2008 è consultabile sul sito ufficiale https://www.bibbiaedu.it/CEI2008/ e disponibile anche in PDF presso https://fondazionegesumaestro.it/bibbia/ . La disponibilità per lettura o download non è una licenza aperta per redistribuirla integralmente.
-Le note ufficiali https://www.bibbiaedu.it/site/twig/templates/v3/html/notelegali/ prevedono usi formativi/educativi non commerciali nei limiti di legge e fatti salvi diritti di terzi, con conservazione del testo e attribuzioni. Non è stata individuata una licenza aperta esplicita per un dataset CEI 2008 redistribuibile in questo HTML. Non è stata chiesta né ottenuta un’autorizzazione individuale. Di conseguenza nessun testo CEI 2008 è incluso. Per integrarlo occorre procurarsi un dataset e un’autorizzazione compatibile con uso e distribuzione previsti; l’importazione non conferisce diritti.
+Tocca il numero di un versetto per selezionarlo. Evidenzia conserva un
+colore; Salva passo aggiunge un segnalibro. La ricerca di un intervallo
+consente di salvare o colorare tutti i versetti selezionati.
+Nel pannello Segnalibri sono disponibili sia i passi salvati sia i colori.
+Preferenze include dimensione, interlinea, carattere, tema ed esportazione.
+I comandi A−, A+ e chiaro/scuro restano sempre disponibili in basso.
 
-COME USARLA
-- Scegli libro, capitolo e versetto, quindi premi Vai al passo.
-- Cerca Mt 5,3-12, Giovanni 3:16, 1 Cor 13 oppure una parola/frase.
-- Il passo richiesto è evidenziato e il browser scorre al primo versetto.
-- Tocca il numero di un versetto per selezionarlo; premi Salva passo per creare un segnalibro. Un riferimento a intervallo salva l’intero intervallo.
-- Precedente e Successivo passano al capitolo vicino, anche cambiando libro.
-- Pannello flottante in basso a destra: A− / A+ per la dimensione del testo e luna/sole per il cambio rapido chiaro/scuro. I controlli restano visibili durante lo scorrimento.
-- Preferenze: tema del dispositivo/chiaro/scuro/carta, dimensione 17–34 px e interlinea.
-- I risultati testuali sono paginati a gruppi di 60; ricerca contigua senza distinzione di accenti e maiuscole. Non è una ricerca semantica, per radici o con operatori booleani.
-- Sono supportati riferimenti a un solo capitolo, non intervalli tra capitoli, riferimenti multipli, suffissi a/b o conversioni della numerazione dei Salmi.
+Salvataggi e preferenze rimangono sul dispositivo e nel browser utilizzato.
+Esporta una copia prima di cambiare browser o cancellarne i dati.
+Ripristina copia accetta anche i preferiti e le evidenziazioni esportati
+dal lettore CEI della chat, se basati sullo stesso EPUB. I segnalibri
+della precedente Diodati rimangono separati: la numerazione di una
+traduzione diversa non viene trasferita automaticamente alla CEI.
 
-IPHONE E OFFLINE
-L’interfaccia è adattata a schermi piccoli, controlli touch e aree sicure. L’HTML è autosufficiente quando viene aperto in un ambiente che esegue JavaScript locale.
-L’anteprima dell’app File di iOS può non eseguire il programma. Non si garantisce l’apertura interattiva diretta da File in Safari: usa un’app/browser che supporti espressamente HTML locali e JavaScript. L’effettiva apertura su iPhone fisico non è stata verificata.
-In alternativa puoi servire l’HTML da un computer sulla stessa rete e aprirne l’indirizzo su iPhone; in questo caso il server deve restare raggiungibile. Non c’è un service worker o un’installazione PWA: la semplice visita a una pagina web o Aggiungi a Home non garantisce che resti offline. Per un’app installabile Safari con cache offline occorre un ulteriore pacchetto servito in HTTPS; questa consegna è un file HTML locale autonomo.
+Su iPhone l'app utilizzata deve eseguire JavaScript negli HTML locali.
+L'anteprima di File può non attivare i comandi. Interfaccia adattata ai
+piccoli schermi; nessuna prova su un iPhone fisico.
 
-SALVATAGGIO
-Preferenze, ultimo passo selezionato e segnalibri: localStorage. Dataset importato: IndexedDB, quando disponibile. Non è memorizzata la posizione precisa di scorrimento, ma l’ultimo passo selezionato. La riapertura mostra quel capitolo e lo evidenzia.
-Browser diversi, modalità privata, cancellazione dati, cambio del percorso del file e limiti del sistema possono perdere o separare i dati. Se la memoria è negata, la lettura continua nella sessione. Esporta periodicamente segnalibri e preferenze. Il backup sostituisce quelli attuali quando ripristinato e richiede esattamente lo stesso dataset. Nessuna sincronizzazione tra dispositivi.
-Scarica HTML con il testo attuale incorpora il dataset importato in un nuovo file autonomo, ma non include preferenze e segnalibri: esportali separatamente. L’avvio di un download può richiedere il salvataggio manuale tramite i controlli del browser/app.
+Fonte: EPUB fornito dall'utente, La Sacra Bibbia CEI 2008, preghiamo.org,
+metadati 2013. La traduzione CEI mantiene i propri diritti; la pubblicazione
+del codice non le attribuisce una licenza aperta.
+Verifica e particolarità della fonte: VERIFICA-CEI-2008.txt e guida interna.
 
-IMPORTAZIONE
-Nel menu Testo, importazione e guida trovi lo schema completo e la conferma dei diritti. Sono accettati JSON fino a 30 MB, 100 libri e 100000 versetti. Sono ammessi dataset parziali e libri deuterocanonici, con identificativi e abbreviazioni non ambigui. Ogni capitolo deve essere un array non vuoto di versetti in ordine numerico crescente; sono ammessi salti di numerazione. Il programma non verifica l’autenticità o la completezza della traduzione né l’esistenza giuridica dell’autorizzazione dichiarata.
-Il file di esempio di struttura reale è diodati-1885.json, che contiene lo stesso dataset completo già incluso nell’HTML. Non si importano direttamente PDF, EPUB, CSV, XML o JSON di altri fornitori senza conversione.
-Schema essenziale:
-{
-  "schemaVersion": 1,
-  "id": "mia-edizione-v1",
-  "title": "Nome della traduzione",
-  "language": "it",
-  "license": "Licenza o autorizzazione",
-  "source": "Provenienza",
-  "books": [{
-    "id": "MAT", "name": "Matteo", "aliases": ["Mt"], "testament": "NT",
-    "chapters": {"5": [{"verse": 3, "text": "Testo autorizzato"}]}
-  }]
-}
-Il testo importato è visualizzato come testo semplice e non eseguito come HTML. Non viene inviato a servizi esterni. I collegamenti alle fonti aprono siti esterni solo se attivati.
+Per rigenerare index.html: node build.mjs
+Per eseguire i controlli dei riferimenti: node tests/reader.cjs
 
-Il programma di questa consegna è utilizzabile e modificabile liberamente. I testi importati mantengono la loro licenza. Le dichiarazioni sul pubblico dominio della Diodati derivano dalla fonte indicata.
+Il dataset schema 2 usa identificatori interni numerici e conserva il
+riferimento originale nei campi label e chapterInfo. Non interpretare
+gli identificatori interni come numeri biblici. Sono accettati anche
+dataset numerici schema 1, con il formato mostrato nella guida interna.

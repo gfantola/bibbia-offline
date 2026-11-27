@@ -1,0 +1,180 @@
+BIBBIA CEI 2008 — LETTORE PERSONALE OFFLINE
+Verifica del 27 novembre 2026
+
+FILE CONSEGNATO
+index.html (progetto GitHub integrato)
+Unico HTML autonomo: testo, stili e funzioni sono inclusi. Non servono file
+di supporto, account, server o connessione per consultarlo in un browser
+che esegua JavaScript nei file locali.
+
+STRUTTURA
+Fonte: la-sacra-bibbia.epub, allegato alla conversazione originale.
+Metadati EPUB: La Sacra Bibbia CEI 2008, preghiamo.org, giugno 2013.
+73 libri: 46 nell'Antico Testamento, 27 nel Nuovo.
+1.338 sezioni di capitolo: comprendono separatamente i 10 capitoli di Ester
+nel testo greco e i 10 nel testo ebraico (1.328 contando Ester una volta).
+35.726 unità di versetto, comprese etichette con lettere e i due testi
+di Ester. Questo è il conteggio delle unità estratte, non un conteggio
+universale dei versetti di tutte le edizioni bibliche.
+35.208 marcatori in apice e 518 versetti ricavati da 15 tabelle.
+Introduzioni di Ester e Siracide conservate, consultabili nel lettore.
+
+COMPLETEZZA E FEDELTÀ DELLA CONVERSIONE
+Verificata la presenza dei 73 libri e del numero atteso di capitoli
+di ciascun libro. Nessun capitolo e nessuna unità indicizzata vuoti.
+Nessuna etichetta duplicata nello stesso capitolo della stessa versione.
+Tutti i marcatori in apice dell'EPUB risultano acquisiti.
+Confrontato integralmente il flusso testuale di ciascun capitolo e delle
+introduzioni con la fonte: uguaglianza dopo la normalizzazione degli spazi
+e le sole riduzioni di ripetizioni esatte delle tabelle descritte sotto.
+Accenti e caratteri Unicode conservati; nessun carattere sostitutivo U+FFFD
+rilevato nella fonte. La copertina e gli elementi editoriali di apertura
+e chiusura non fanno parte della lettura per versetti.
+
+Questa verifica attesta la conversione della fonte fornita e la sua
+struttura. Non è una collazione integrale con l'edizione ufficiale CEI;
+non certifica l'assenza di errori editoriali o omissioni nella fonte.
+Non sono state aggiunte parole o porzioni da altre edizioni.
+
+PARTICOLARITÀ CONSERVATE
+- Numeri: l'etichetta 25,19 è posta dalla fonte all'inizio del capitolo 26.
+  Il riferimento Nm 25,19 raggiunge quella posizione senza spostare il testo.
+- Ester: testo greco ed ebraico distinti. Nel greco, il capitolo 9 passa
+  dall'etichetta 29 alla 31. Non è stato inventato o ricostruito un verso 30.
+- Giobbe 31, Siracide 17, 28 e 43, Isaia 7 e 10: porzioni o versetti
+  compaiono in ordine numerico non crescente. Ordine originale conservato.
+- Salmi: conservata la doppia numerazione. La navigazione usa il primo
+  numero del titolo, come nell'EPUB, non quello fra parentesi.
+- Ester e altri passi: conservati i suffissi alfabetici dei versetti.
+- Baruc: il titolo “Lettera di Geremia” introduce il capitolo 6 e non
+  viene conteggiato come capitolo aggiuntivo.
+
+TABELLE DELLA FONTE
+In 310 celle sono presenti duplicazioni esatte, talvolta multiple,
+dello stesso contenuto, già nell'EPUB. Nella lettura è mantenuta una sola
+copia di ciascun blocco esattamente ripetuto. Non è stata operata alcuna
+correzione lessicale. Ogni capitolo interessato contiene un avviso e una
+sezione apribile con il testo delle celle originali, comprese ripetizioni
+e indicazioni alfabetiche degli acrostici.
+Tabelle interessate: Salmi 9, 10, 25, 34, 37, 111, 112, 119, 145;
+Proverbi 31; Lamentazioni 1, 2, 3, 4; Naum 1.
+
+FUNZIONI E PROVE
+Navigazione per libro, capitolo, versetto e versione di Ester.
+Riferimenti con abbreviazioni o nomi, intervalli e suffissi alfabetici.
+Ricerca di parole intere o frasi, ambito selezionabile e risultati a pagine.
+Quattro colori di evidenziazione, preferiti, ultima posizione, carattere
+regolabile fra 16 e 36 px, caratteri classici o lineari, tema chiaro/scuro.
+Esportazione e importazione dei salvataggi in JSON.
+Verifiche funzionali superate con Microsoft Edge / Chromium, aprendo
+direttamente l'HTML locale e disattivando la connessione del browser.
+Provati riferimenti e intervalli, varianti di Ester, doppia numerazione
+dei Salmi, versetti nelle tabelle, ricerca parole/frasi e paginazione,
+evidenziazione, preferiti, conservazione al ricaricamento, esportazione
+e importazione, caratteri, tema e limiti di navigazione fra capitoli.
+Visualizzazione controllata a larghezze 1.440, 390 e 320 px, senza
+scorrimento orizzontale. Nessun errore JavaScript o richiesta HTTP/HTTPS.
+Non è stata effettuata una prova su un iPhone fisico o in Safari iOS.
+
+UTILIZZO SU PC E IPHONE
+PC: aprire il file HTML con un browser.
+iPhone: occorre un'app o browser che esegua JavaScript nei file HTML
+locali. L'anteprima di File e le anteprime degli allegati possono non
+eseguire i comandi. L'HTML è adattato agli schermi mobili, ma non può
+modificare le limitazioni dell'app scelta per aprirlo.
+I salvataggi appartengono al browser e al percorso del file. Non vengono
+sincronizzati fra dispositivi. Spostare/rinominare il file o cancellare
+i dati del browser può renderli indisponibili: usare Esporta salvataggi
+per conservarli e Importa salvataggi sul nuovo dispositivo.
+Se la memoria locale è bloccata, il lettore lo segnala; il testo rimane
+consultabile e si possono esportare i salvataggi della sessione.
+
+IMPRONTA SHA-256 DELL'EPUB
+1f3fd7333e96beb491ef0cf16d681365be3476b00d6b630917e4d0b6ce3f5408
+
+CONTEGGI PER LIBRO
+Genesi: 50 capitoli/sezioni, 1533 unità di versetto
+Esodo: 40 capitoli/sezioni, 1213 unità di versetto
+Levitico: 27 capitoli/sezioni, 859 unità di versetto
+Numeri: 36 capitoli/sezioni, 1289 unità di versetto
+Deuteronomio: 34 capitoli/sezioni, 958 unità di versetto
+Giosuè: 24 capitoli/sezioni, 658 unità di versetto
+Giudici: 21 capitoli/sezioni, 618 unità di versetto
+Rut: 4 capitoli/sezioni, 85 unità di versetto
+1 Samuele: 31 capitoli/sezioni, 811 unità di versetto
+2 Samuele: 24 capitoli/sezioni, 695 unità di versetto
+1 Re: 22 capitoli/sezioni, 817 unità di versetto
+2 Re: 25 capitoli/sezioni, 719 unità di versetto
+Cronache 1: 29 capitoli/sezioni, 943 unità di versetto
+Cronache 2: 36 capitoli/sezioni, 822 unità di versetto
+Esdra: 10 capitoli/sezioni, 280 unità di versetto
+Neemia: 13 capitoli/sezioni, 405 unità di versetto
+Tobia: 14 capitoli/sezioni, 248 unità di versetto
+Giuditta: 16 capitoli/sezioni, 340 unità di versetto
+Ester: 20 capitoli/sezioni, 421 unità di versetto
+Maccabei 1: 16 capitoli/sezioni, 924 unità di versetto
+Maccabei 2: 15 capitoli/sezioni, 555 unità di versetto
+Giobbe: 42 capitoli/sezioni, 1071 unità di versetto
+Salmi: 150 capitoli/sezioni, 2528 unità di versetto
+Proverbi: 31 capitoli/sezioni, 915 unità di versetto
+Qoelet: 12 capitoli/sezioni, 222 unità di versetto
+Cantico dei cantici: 8 capitoli/sezioni, 117 unità di versetto
+Sapienza: 19 capitoli/sezioni, 435 unità di versetto
+Siracide: 51 capitoli/sezioni, 1409 unità di versetto
+Isaia: 66 capitoli/sezioni, 1294 unità di versetto
+Geremia: 52 capitoli/sezioni, 1365 unità di versetto
+Lamentazioni: 5 capitoli/sezioni, 154 unità di versetto
+Baruc: 6 capitoli/sezioni, 213 unità di versetto
+Ezechiele: 48 capitoli/sezioni, 1273 unità di versetto
+Daniele: 14 capitoli/sezioni, 530 unità di versetto
+Osea: 14 capitoli/sezioni, 197 unità di versetto
+Gioele: 4 capitoli/sezioni, 73 unità di versetto
+Amos: 9 capitoli/sezioni, 146 unità di versetto
+Abdia: 1 capitoli/sezioni, 21 unità di versetto
+Giona: 4 capitoli/sezioni, 48 unità di versetto
+Michea: 7 capitoli/sezioni, 105 unità di versetto
+Naum: 3 capitoli/sezioni, 47 unità di versetto
+Abacuc: 3 capitoli/sezioni, 56 unità di versetto
+Sofonia: 3 capitoli/sezioni, 53 unità di versetto
+Aggeo: 2 capitoli/sezioni, 38 unità di versetto
+Zaccaria: 14 capitoli/sezioni, 211 unità di versetto
+Malachia: 3 capitoli/sezioni, 55 unità di versetto
+Vangelo secondo Matteo: 28 capitoli/sezioni, 1071 unità di versetto
+Vangelo secondo Marco: 16 capitoli/sezioni, 678 unità di versetto
+Vangelo secondo Luca: 24 capitoli/sezioni, 1151 unità di versetto
+Vangelo secondo Giovanni: 21 capitoli/sezioni, 879 unità di versetto
+Atti degli Apostoli: 28 capitoli/sezioni, 1006 unità di versetto
+Lettera ai Romani: 16 capitoli/sezioni, 433 unità di versetto
+Prima lettera ai Corinzi: 16 capitoli/sezioni, 437 unità di versetto
+Seconda lettera ai Corinzi: 13 capitoli/sezioni, 256 unità di versetto
+Lettera ai Gàlati: 6 capitoli/sezioni, 149 unità di versetto
+Lettera agli Efesini: 6 capitoli/sezioni, 155 unità di versetto
+Lettera ai Filippesi: 4 capitoli/sezioni, 104 unità di versetto
+Lettera ai Colossesi: 4 capitoli/sezioni, 95 unità di versetto
+Prima lettera ai Tessalonicesi: 5 capitoli/sezioni, 89 unità di versetto
+Seconda lettera ai Tessalonicesi: 3 capitoli/sezioni, 47 unità di versetto
+Prima lettera a Timòteo: 6 capitoli/sezioni, 113 unità di versetto
+Seconda lettera a Timòteo: 4 capitoli/sezioni, 83 unità di versetto
+Lettera a Tito: 3 capitoli/sezioni, 46 unità di versetto
+Lettera a Filèmone: 1 capitoli/sezioni, 25 unità di versetto
+Lettera agli Ebrei: 13 capitoli/sezioni, 303 unità di versetto
+Lettera di Giacomo: 5 capitoli/sezioni, 108 unità di versetto
+Prima lettera di Pietro: 5 capitoli/sezioni, 105 unità di versetto
+Seconda lettera di Pietro: 3 capitoli/sezioni, 61 unità di versetto
+Prima lettera di Giovanni: 5 capitoli/sezioni, 105 unità di versetto
+Seconda lettera di Giovanni: 1 capitoli/sezioni, 13 unità di versetto
+Terza lettera di Giovanni: 1 capitoli/sezioni, 15 unità di versetto
+Lettera di Giuda: 1 capitoli/sezioni, 25 unità di versetto
+Libro dell’Apocalisse: 22 capitoli/sezioni, 405 unità di versetto
+
+INTEGRAZIONE NEL PROGETTO GITHUB
+Interfaccia originale, comandi rapidi, interlinea, tema carta, segnalibri
+e importazione dataset mantenuti. Evidenziazioni permanenti aggiunte.
+Confronto del nuovo dataset con il testo estratto: tutte le 35.726 unità
+sono identiche, inclusi i riferimenti alfabetici e le versioni di Ester.
+Verificato con le funzioni del programma che ogni etichetta originale
+è risolvibile e raggiunge il versetto corretto. Testati gli intervalli
+con ordine editoriale non crescente, compatibilità schema 1, persistenza
+di segnalibri e colori e importazione del backup del lettore della chat.
+Le prove di browser sopra elencate si riferiscono al lettore autonomo
+originario. Il progetto integrato riusa l’interfaccia del sito GitHub.

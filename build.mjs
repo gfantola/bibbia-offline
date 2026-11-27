@@ -1,7 +1,10 @@
 import fs from 'node:fs';
-const data=JSON.parse(fs.readFileSync(new URL('./diodati-1885.json',import.meta.url),'utf8'));
+const data=JSON.parse(fs.readFileSync(new URL('./cei-2008.json',import.meta.url),'utf8'));
 const template=fs.readFileSync(new URL('./template.html',import.meta.url),'utf8');
-if(!template.includes('DATA_PLACEHOLDER'))throw Error('Segnaposto dataset mancante');
-const html=template.replace('DATA_PLACEHOLDER',JSON.stringify(data).replaceAll('<','\\u003c'));
+if(template.split('DATA_PLACEHOLDER').length!==2)throw Error('Serve un solo segnaposto dataset');
+if(data.books.length!==73)throw Error('Il dataset CEI deve contenere 73 libri');
+const total=data.books.reduce((sum,b)=>sum+Object.values(b.chapters).reduce((n,vs)=>n+vs.length,0),0);
+if(total!==35726)throw Error('Conteggio dei versetti inatteso');
+const html=template.replace('DATA_PLACEHOLDER',()=>JSON.stringify(data).replaceAll('<','\\u003c'));
 fs.writeFileSync(new URL('./index.html',import.meta.url),html);
-console.log('index.html aggiornato');
+console.log('index.html aggiornato: CEI 2008, 73 libri, '+total+' unità di versetto');
