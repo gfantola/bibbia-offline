@@ -6,7 +6,7 @@ class El{
  set value(v){this._value=String(v)}
  append(...a){this.children.push(...a)}replaceChildren(...a){this.children=[...a];this._value=''}setAttribute(k,v){this.attrs[k]=v}removeAttribute(k){delete this.attrs[k]}showModal(){this.open=true}close(){this.open=false}click(){this.onclick?.()}remove(){}scrollIntoView(){}cloneNode(){return this}
 }
-const els=new Map(),selects=new Set(['book','chapter','verse','variant','theme','leading','fontFamily']);
+const els=new Map(),selects=new Set(['book','chapter','verse','verseEnd','variant','theme','leading','fontFamily']);
 const get=id=>{if(!els.has(id))els.set(id,new El(selects.has(id)?'select':'div'));return els.get(id)};
 get('embeddedData').textContent=JSON.stringify(data);
 const memory=new Map(),doc={getElementById:get,querySelectorAll(){return []},createElement:t=>new El(t),createTextNode:t=>({textContent:t}),documentElement:new El(),body:new El()};
@@ -25,3 +25,18 @@ const legacy={format:'bibbia-cei2008-v1',source:data.sourceHash,state:{fav:{'49:
 run("$('book').value='EST';variantOptions(book('EST'));chapterOptions()");assert.equal(get('chapter').children.length,10);get('variant').value='Testo ebraico';run('chapterOptions()');assert.equal(get('chapter').children[0].value,'11');
 run("navigate(resolveReference('Ap 22,21'),false)");assert.equal(get('next').disabled,true);run("navigate(resolveReference('Gn 1,1'),false)");assert.equal(get('previous').disabled,true);
 console.log('PASS: complete source conservation, 35726 resolvable verse labels, ranges with reordered verses, Ester variants, source anomalies, bookmarks/highlights persistence, original reader backup, schema-1 compatibility, chapter selectors and boundaries.');
+
+
+// Optional endpoint: single verse, ranges, dependent selectors, letters and reordered source.
+run("navigate(resolveReference('Gv 3,16'),false)");assert.equal(get('verseEnd').value,'');
+get('verse').value='16';run("finalVerseOptions()");get('navigate').onsubmit({preventDefault(){}});assert.equal(run('selectedVerses().length'),1);
+get('verseEnd').value='18';get('navigate').onsubmit({preventDefault(){}});assert.equal(run('selectedVerses().length'),3);assert.match(run('reference()'),/3,16–18/);assert.equal(get('verseEnd').value,'18');
+get('verse').value='19';get('verse').onchange();assert.equal(get('verseEnd').value,'');assert.ok(get('verseEnd').children.slice(1).every(o=>+o.value>=19));
+get('chapter').value='4';get('chapter').onchange();assert.equal(get('verseEnd').value,'');assert.equal(get('verse').value,'1');
+run("navigate(resolveReference('Mt 5,3-12'),false)");assert.equal(get('verse').value,'3');assert.equal(get('verseEnd').value,'12');get('verseEnd').value='';get('navigate').onsubmit({preventDefault(){}});assert.equal(run('selectedVerses().length'),1);
+run("navigate(resolveReference('Gb 31,35-40'),false)");assert.equal(run('label(book().chapters[state.chapter].find(v=>v.verse===+$("verse").value))'),'35');get('navigate').onsubmit({preventDefault(){}});assert.equal(run('selectedVerses().length'),7);
+run("navigate(resolveReference('Est greco 1,1a'),false)");assert.equal(get('verseEnd').value,'');assert.ok(get('verseEnd').children.some(o=>o.textContent==='1b'));get('verseEnd').value=get('verseEnd').children.find(o=>o.textContent==='1b').value;get('navigate').onsubmit({preventDefault(){}});assert.equal(run('selectedVerses().length'),2);
+run("navigate(resolveReference('Nm 25,19'),false)");assert.equal(get('verseEnd').value,'');get('navigate').onsubmit({preventDefault(){}});assert.match(run('reference()'),/25,19/);
+run("navigate(resolveReference('Ap 22,21'),false)");assert.equal(get('verseEnd').children.length,2);
+console.log('PASS: optional final verse, single/range form submission, endpoint constraints and resets, search synchronization, reordered and lettered CEI verses.');
+
